@@ -1,6 +1,6 @@
 Experiment to use remix unstable vite for cloudflare workers.
 
-This demo requires `serverBuildEntry` option from this PR https://github.com/remix-run/remix/pull/7975
+~This demo requires `serverBuildEntry` option from this PR https://github.com/remix-run/remix/pull/7975~ (it turns out it's not necessarly, see https://github.com/hi-ogawa/demo-remix-unstable-vite-cloudflare-workers/pull/4)
 
 ```sh
 # run vite dev server with miniflare to mimic cloudflare workers runtime
