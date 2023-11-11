@@ -7,6 +7,11 @@ import isbot from "isbot";
 // @ts-ignore
 import { renderToReadableStream } from "react-dom/server.browser";
 
+// setup miniflare for dev
+if (import.meta.env.DEV) {
+  await import("./miniflare");
+}
+
 export default async function handleRequest(
   request: Request,
   responseStatusCode: number,
