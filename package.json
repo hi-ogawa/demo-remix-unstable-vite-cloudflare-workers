@@ -24,7 +24,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231025.0",
     "@playwright/test": "^1.39.0",
-    "@remix-run/dev": "file:.yalc/@remix-run/dev",
+    "@remix-run/dev": "0.0.0-nightly-d437e79-20231110",
     "@remix-run/eslint-config": "0.0.0-nightly-d437e79-20231110",
     "@types/express": "^4.17.20",
     "@types/react": "^18.2.20",
