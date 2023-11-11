@@ -1,3 +1,21 @@
+Experiment to use miniflare for remix unstable vite dev
+
+```sh
+# run vite dev server on nodejs with miniflare to mimic cloudflare workers runtime
+pnpm dev
+
+# run production build locally with genuine workerd runtime by wrangler dev
+pnpm build
+pnpm preview
+
+# release cloudflare workers
+pnpm release
+```
+
+---
+
+(original README.md from https://github.com/remix-run/remix/blob/bf2feb9bdb292ac6560964d6749b0fcf9a8c784e/templates/unstable-vite-express/README.md)
+
 # templates/unstable-vite-express
 
 ⚠️ Remix support for Vite is unstable and not recommended for production.
