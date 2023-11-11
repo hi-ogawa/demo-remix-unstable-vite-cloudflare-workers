@@ -4,6 +4,8 @@ export * from "virtual:server-entry";
 
 //
 // initialize miniflare to mimic cloudflare workers runtime on nodejs
+// TODO: however it's not really necessarily to do this here
+//       since assigning to `globalThis` can be equally done, for example, within `configureServer` hook just like `honojs/vite-plugins`.
 //
 // cf.
 // https://github.com/cloudflare/miniflare/blob/master/packages/miniflare/README.md
