@@ -29,6 +29,7 @@ var vmod = require('./vmod.js');
 var removeExports = require('./remove-exports.js');
 var legacyCssImports = require('./legacy-css-imports.js');
 var replaceImportSpecifier = require('./replace-import-specifier.js');
+var virtualModules = require('../compiler/server/virtualModules.js');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -348,7 +349,13 @@ const remixVitePlugin = (options = {}) => {
           // server entry files since those come from within `node_modules`.
           // That means that before Vite pre-bundles dependencies (e.g. first time dev server is run)
           // mismatching Remix routers cause `Error: You must render this element inside a <Remix> element`.
-          "@remix-run/react"]
+          "@remix-run/react"],
+          // prevent virtual modules (e.g. @remix-run/dev/server-build) from being optimized
+          // (note that optimization would make this vite plugin's transform to be skipped)
+          exclude: ["@remix-run/dev"]
+        },
+        ssr: {
+          noExternal: ["@remix-run/dev"]
         },
         esbuild: {
           jsx: "automatic",
@@ -520,6 +527,9 @@ const remixVitePlugin = (options = {}) => {
     name: "remix-virtual-modules",
     enforce: "pre",
     resolveId(id) {
+      if (id === virtualModules.serverBuildVirtualModule.id) {
+        id = serverEntryId;
+      }
       if (vmods.includes(id)) return vmod.resolve(id);
     },
     async load(id) {
