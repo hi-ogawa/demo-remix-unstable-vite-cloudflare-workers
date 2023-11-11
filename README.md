@@ -1,14 +1,14 @@
 Experiment to use remix unstable vite for cloudflare workers.
 
-This demo requires `serverBuildEntry` option from this PR https://github.com/remix-run/remix/pull/7975
+~This demo requires `serverBuildEntry` option from this PR https://github.com/remix-run/remix/pull/7975~ (it turns out it's not necessarly, see https://github.com/hi-ogawa/demo-remix-unstable-vite-cloudflare-workers/pull/4)
 
 ```sh
 # run vite dev server with miniflare to mimic cloudflare workers runtime
 # (see app/miniflare.ts imported by app/entry.server.tsx)
 pnpm dev
 
-# run production build locally with genuine workerd runtime by wrangler dev
-# (see app/adapter-cloudflare-workers.ts)
+# run production build locally with genuine workerd runtime provided by wrangler dev
+# (see app/server.mjs)
 pnpm build
 pnpm preview
 
