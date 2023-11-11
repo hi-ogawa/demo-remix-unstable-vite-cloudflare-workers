@@ -1,5 +1,7 @@
 Experiment to use miniflare for remix unstable vite dev
 
+- https://remix-unstable-vite-cloudflare-workers.hiro18181.workers.dev
+
 ```sh
 # run vite dev server on nodejs with miniflare to mimic cloudflare workers runtime
 pnpm dev
