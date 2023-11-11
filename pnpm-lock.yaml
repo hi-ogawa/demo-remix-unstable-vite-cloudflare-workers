@@ -34,6 +34,9 @@ devDependencies:
   '@cloudflare/workers-types':
     specifier: ^4.20231025.0
     version: 4.20231025.0
+  '@playwright/test':
+    specifier: ^1.39.0
+    version: 1.39.0
   '@remix-run/dev':
     specifier: file:.yalc/@remix-run/dev
     version: file:.yalc/@remix-run/dev(typescript@5.2.2)(vite@4.5.0)
@@ -1371,6 +1374,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@playwright/test@1.39.0:
+    resolution: {integrity: sha512-3u1iFqgzl7zr004bGPYiN/5EZpRUSFddQBra8Rqll5N0/vfpqlP9I9EXqAoGacuAbX6c9Ulg/Cjqglp5VkK6UQ==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dependencies:
+      playwright: 1.39.0
+    dev: true
 
   /@remix-run/eslint-config@0.0.0-nightly-d437e79-20231110(eslint@8.53.0)(react@18.2.0)(typescript@5.2.2):
     resolution: {integrity: sha512-FmIgF2v3A2M9MiwX/nZ89XeTvgPkFB8esev3qQM0vGRySuGHVS6UapUUeEpdE88nZLG+bdbN2AYnl3syxdUO0g==}
@@ -3599,6 +3610,14 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
+  /fsevents@2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -5376,6 +5395,22 @@ packages:
       jsonc-parser: 3.2.0
       mlly: 1.4.2
       pathe: 1.1.1
+    dev: true
+
+  /playwright-core@1.39.0:
+    resolution: {integrity: sha512-+k4pdZgs1qiM+OUkSjx96YiKsXsmb59evFoqv8SKO067qBA+Z2s/dCzJij/ZhdQcs2zlTAgRKfeiiLm8PQ2qvw==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dev: true
+
+  /playwright@1.39.0:
+    resolution: {integrity: sha512-naE5QT11uC/Oiq0BwZ50gDmy8c8WLPRTEWuSSFVG2egBka/1qMoSqYQcROMT9zLwJ86oPofcTH2jBY/5wWOgIw==}
+    engines: {node: '>=16'}
+    hasBin: true
+    dependencies:
+      playwright-core: 1.39.0
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /postcss-discard-duplicates@5.1.0(postcss@8.4.31):
