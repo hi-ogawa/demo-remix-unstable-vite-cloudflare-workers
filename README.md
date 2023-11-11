@@ -7,8 +7,8 @@ This demo requires `serverBuildEntry` option from this PR https://github.com/rem
 # (see app/miniflare.ts imported by app/entry.server.tsx)
 pnpm dev
 
-# run production build locally with genuine workerd runtime by wrangler dev
-# (see app/adapter-cloudflare-workers.ts)
+# run production build locally with genuine workerd runtime provided by wrangler dev
+# (see app/server.mjs)
 pnpm build
 pnpm preview
 

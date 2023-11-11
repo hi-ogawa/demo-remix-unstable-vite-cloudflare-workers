@@ -1,6 +1,6 @@
 name = "remix-unstable-vite-cloudflare-workers"
 
-main = "./build/index.js"
+main = "./app/server.mjs"
 assets = "./public"
 workers_dev = true
 node_compat = true
