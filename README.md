@@ -1,4 +1,4 @@
-Experiment to use remix unstable dev for cloudflare workers.
+Experiment to use remix unstable vite for cloudflare workers.
 
 This demo requires `serverBuildEntry` option from this PR https://github.com/remix-run/remix/pull/7975
 
