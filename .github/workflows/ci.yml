@@ -1,0 +1,20 @@
+name: ci
+"on":
+  - push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+      - run: pnpm i
+      - run: pnpm build
+      - run: npx playwright install chromium
+      - run: pnpm test-e2e
+      - run: E2E_WEB_SERVER_COMMAND='pnpm preview' pnpm test-e2e

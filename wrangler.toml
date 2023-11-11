@@ -1,0 +1,15 @@
+name = "remix-unstable-vite-cloudflare-workers"
+
+main = "./build/index.js"
+assets = "./public"
+workers_dev = true
+node_compat = true
+compatibility_date = "2023-04-20"
+
+# resource created via
+#   npx wrangler kv:namespace create kv
+#   npx wrangler kv:namespace create kv --preview
+[[kv_namespaces]]
+binding = "kv"
+id = "583c3ad45f3c4baeb48e901e1cd8ad12"
+preview_id = "1e0339d7c5cf46019b1b6462ce9276d1"

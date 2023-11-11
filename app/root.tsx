@@ -16,7 +16,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body ref={(el) => el?.setAttribute("data-testid", "hydrated")}>
         <Outlet />
         <ScrollRestoration />
         <LiveReload />
