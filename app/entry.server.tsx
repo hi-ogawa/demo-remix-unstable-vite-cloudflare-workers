@@ -7,6 +7,11 @@ import isbot from "isbot";
 // @ts-ignore
 import { renderToReadableStream } from "react-dom/server.browser";
 
+// initialize miniflare to mimic cloudflare workers runtime on vite server
+if (import.meta.env.DEV) {
+  await import("./miniflare");
+}
+
 export default async function handleRequest(
   request: Request,
   responseStatusCode: number,

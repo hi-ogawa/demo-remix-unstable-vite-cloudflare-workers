@@ -3,12 +3,12 @@ Experiment to use remix unstable dev for cloudflare workers.
 This demo requires `serverBuildEntry` option from this PR https://github.com/remix-run/remix/pull/7975
 
 ```sh
-# run vite dev server on nodejs with miniflare to mimic cloudflare workers runtime
-# see app/server-miniflare.ts
+# run vite dev server with miniflare to mimic cloudflare workers runtime
+# (see app/miniflare.ts imported by app/entry.server.tsx)
 pnpm dev
 
 # run production build locally with genuine workerd runtime by wrangler dev
-# see app/server-cloudflare-workers.ts
+# (see app/adapter-cloudflare-workers.ts)
 pnpm build
 pnpm preview
 
