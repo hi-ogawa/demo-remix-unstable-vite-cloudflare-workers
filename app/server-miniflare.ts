@@ -1,6 +1,5 @@
 // re-export default server entry to reuse remix's default vite dev server
-// @ts-expect-error
-export * from "virtual:server-entry";
+export * from "@remix-run/dev/server-build"
 
 //
 // initialize miniflare to mimic cloudflare workers runtime on nodejs
