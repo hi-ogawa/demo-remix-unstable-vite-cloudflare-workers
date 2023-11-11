@@ -8,7 +8,7 @@ export default defineConfig((env) => ({
     remix({
       serverBuildEntry:
         env.command === "build"
-          ? "./app/server-cloudflare-workers.ts"
+          ? "./app/adapter-cloudflare-workers.ts"
           : undefined,
     }),
     tsconfigPaths(),

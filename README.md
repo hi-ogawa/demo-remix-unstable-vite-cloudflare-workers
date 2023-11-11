@@ -4,11 +4,11 @@ This demo requires `serverBuildEntry` option from this PR https://github.com/rem
 
 ```sh
 # run vite dev server on nodejs with miniflare to mimic cloudflare workers runtime
-# see app/server-miniflare.ts
+# see app/miniflare.ts
 pnpm dev
 
 # run production build locally with genuine workerd runtime by wrangler dev
-# see app/server-cloudflare-workers.ts
+# see app/adapter-cloudflare-workers.ts
 pnpm build
 pnpm preview
 
