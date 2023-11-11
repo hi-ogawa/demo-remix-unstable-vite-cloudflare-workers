@@ -7,7 +7,7 @@ import isbot from "isbot";
 // @ts-ignore
 import { renderToReadableStream } from "react-dom/server.browser";
 
-// setup miniflare for dev
+// initialize miniflare to mimic cloudflare workers runtime on nodejs
 if (import.meta.env.DEV) {
   await import("./miniflare");
 }
