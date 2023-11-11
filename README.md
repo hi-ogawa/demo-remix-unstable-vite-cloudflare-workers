@@ -1,16 +1,18 @@
-Experiment to use miniflare for remix unstable vite dev
+Experiment to use remix unstable dev for cloudflare workers.
 
-- https://remix-unstable-vite-cloudflare-workers.hiro18181.workers.dev
+This demo requires `serverBuildEntry` option from this PR https://github.com/remix-run/remix/pull/7975
 
 ```sh
 # run vite dev server on nodejs with miniflare to mimic cloudflare workers runtime
+# see app/server-miniflare.ts
 pnpm dev
 
 # run production build locally with genuine workerd runtime by wrangler dev
+# see app/server-cloudflare-workers.ts
 pnpm build
 pnpm preview
 
-# release cloudflare workers
+# deploy cloudflare workers
 pnpm release
 ```
 
