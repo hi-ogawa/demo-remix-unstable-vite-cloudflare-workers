@@ -1,4 +1,4 @@
-import { Form, useLoaderData } from "@remix-run/react";
+import { Form, useLoaderData, useNavigation } from "@remix-run/react";
 import { ActionFunctionArgs, json } from "@remix-run/server-runtime";
 
 const kvKey = "counter";
@@ -18,21 +18,23 @@ export async function action({ request }: ActionFunctionArgs) {
 
 export default function CounterRoute() {
   const { value } = useLoaderData<typeof loader>();
+  const navigation = useNavigation();
+  const loading = navigation.state !== "idle";
+
   return (
     <div>
       <h2>KV Demo</h2>
       <pre>counter = {value}</pre>
-      <div style={{ display: "flex", gap: "0.5rem" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
         <Form method="POST">
           <input name="delta" value="-1" type="hidden" />
-          <button value="-1" onClick={() => {}}>
-            -1
-          </button>
+          <button disabled={loading}>-1</button>
         </Form>
         <Form method="POST">
           <input name="delta" value="+1" type="hidden" />
-          <button onClick={() => {}}>+1</button>
+          <button disabled={loading}>+1</button>
         </Form>
+        {loading && <span>(loading...)</span>}
       </div>
     </div>
   );
