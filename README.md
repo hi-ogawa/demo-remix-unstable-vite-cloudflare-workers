@@ -16,6 +16,14 @@ pnpm preview
 pnpm release
 ```
 
+## references
+
+- https://github.com/cloudflare/workers-sdk/tree/main/packages/miniflare
+- https://rakkasjs.org/guide/cloudflare-workers
+- https://vike.dev/cloudflare-workers
+- https://kit.svelte.dev/docs/adapter-cloudflare-workers
+- https://github.com/honojs/vite-plugins/tree/main/packages/dev-server
+
 ---
 
 (original README.md from https://github.com/remix-run/remix/blob/bf2feb9bdb292ac6560964d6749b0fcf9a8c784e/templates/unstable-vite-express/README.md)
