@@ -4,6 +4,8 @@ main = "./app/server.mjs"
 assets = "./public"
 workers_dev = true
 compatibility_date = "2023-04-20"
+# might be easier to debug without minify
+minify = true
 
 # resource created via
 #   npx wrangler kv:namespace create kv
