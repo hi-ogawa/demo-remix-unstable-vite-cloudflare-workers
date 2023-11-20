@@ -3,7 +3,6 @@ name = "remix-unstable-vite-cloudflare-workers"
 main = "./app/server.mjs"
 assets = "./public"
 workers_dev = true
-node_compat = true
 compatibility_date = "2023-04-20"
 
 # resource created via
