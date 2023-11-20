@@ -4,5 +4,9 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   clearScreen: false,
+  build: {
+    // to be fixed in https://github.com/remix-run/remix/pull/8039
+    copyPublicDir: false
+  },
   plugins: [remix(), tsconfigPaths()],
 });
