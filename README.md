@@ -14,6 +14,10 @@ pnpm preview
 
 # deploy cloudflare workers
 pnpm release
+
+# analyze bundle
+# upload build/esbuild-metafile.json to https://esbuild.github.io/analyze/
+esbuild build/index.js --minify --outfile=build/index-bundle.js --metafile=build/esbuild-metafile.json --bundle --format=esm --platform=browser
 ```
 
 ## references
