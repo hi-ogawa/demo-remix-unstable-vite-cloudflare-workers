@@ -27,6 +27,7 @@ esbuild build/index.js --minify --outfile=build/index-bundle.js --metafile=build
 - https://vike.dev/cloudflare-workers
 - https://kit.svelte.dev/docs/adapter-cloudflare-workers
 - https://github.com/honojs/vite-plugins/tree/main/packages/dev-server
+- https://github.com/cloudflare/next-on-pages/tree/main/internal-packages/next-dev
 
 ---
 
