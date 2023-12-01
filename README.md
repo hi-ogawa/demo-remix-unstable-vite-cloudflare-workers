@@ -16,8 +16,8 @@ pnpm preview
 pnpm release
 
 # analyze bundle
-# upload build/esbuild-metafile.json to https://esbuild.github.io/analyze/
-esbuild build/server/index.js --minify --outfile=build/index-bundle.js --metafile=build/esbuild-metafile.json --bundle --format=esm --platform=browser
+# (upload build/server/esbuild-metafile.json to https://esbuild.github.io/analyze/)
+pnpm build-metafile
 ```
 
 ## references

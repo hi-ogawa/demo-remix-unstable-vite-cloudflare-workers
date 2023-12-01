@@ -8,6 +8,7 @@
     "dev": "vite dev",
     "preview": "wrangler dev",
     "test-e2e": "playwright test",
+    "build-metafile": "esbuild build/server/index.js --minify --outfile=build/server/esbuild-index.js --metafile=build/server/esbuild-metafile.json --bundle --format=esm --platform=browser",
     "release": "wrangler deploy",
     "typecheck": "tsc"
   },
