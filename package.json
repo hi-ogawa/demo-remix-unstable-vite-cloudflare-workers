@@ -12,9 +12,9 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@remix-run/node": "2.3.1-pre.0",
-    "@remix-run/react": "2.3.1-pre.0",
-    "@remix-run/server-runtime": "2.3.1-pre.0",
+    "@remix-run/node": "0.0.0-nightly-a9e0102-20231130",
+    "@remix-run/react": "0.0.0-nightly-a9e0102-20231130",
+    "@remix-run/server-runtime": "0.0.0-nightly-a9e0102-20231130",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231025.0",
     "@playwright/test": "^1.39.0",
-    "@remix-run/dev": "2.3.1-pre.0",
+    "@remix-run/dev": "0.0.0-nightly-a9e0102-20231130",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "esbuild": "^0.19.6",
@@ -30,7 +30,7 @@
     "typescript": "^5.1.6",
     "vite": "^5.0.0",
     "vite-tsconfig-paths": "^4.2.1",
-    "wrangler": "^3.15.0"
+    "wrangler": "^3.18.0"
   },
   "engines": {
     "node": ">=18.0.0"
