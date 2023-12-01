@@ -1,7 +1,7 @@
 name = "remix-unstable-vite-cloudflare-workers"
 
 main = "./app/server.mjs"
-assets = "./public"
+assets = "./build/client"
 workers_dev = true
 compatibility_date = "2023-04-20"
 # might be easier to debug without minify

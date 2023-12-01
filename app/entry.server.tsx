@@ -4,7 +4,7 @@ import type { EntryContext } from "@remix-run/server-runtime";
 import { RemixServer } from "@remix-run/react";
 import isbot from "isbot";
 
-// @ts-ignore force "browser" export on node, but no typing available yet
+// force "browser" export on node (typing is from env.d.ts)
 import { renderToReadableStream } from "react-dom/server.browser";
 
 // initialize miniflare to mimic cloudflare workers runtime on vite server
