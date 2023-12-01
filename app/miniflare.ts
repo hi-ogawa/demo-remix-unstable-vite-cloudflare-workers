@@ -14,3 +14,19 @@ const miniflare = new Miniflare({
 
 const env = await miniflare.getBindings();
 Object.assign(globalThis, { env });
+
+/*
+
+Quick and dirty exploration of binding API
+
+$ pnpm repl
+> await env.kv.list()
+{
+  keys: [ { name: 'counter' } ],
+  list_complete: true,
+  cacheStatus: null
+}
+> await env.kv.get("counter")
+'4'
+
+*/

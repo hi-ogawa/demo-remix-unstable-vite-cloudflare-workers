@@ -6,6 +6,7 @@
   "scripts": {
     "build": "vite build && vite build --ssr",
     "dev": "vite dev",
+    "repl": "tsx -i -e \"setTimeout(() => import('./app/miniflare.ts'), 300)\"",
     "preview": "wrangler dev",
     "test-e2e": "playwright test",
     "build-metafile": "esbuild build/server/index.js --minify --outfile=build/server/esbuild-index.js --metafile=build/server/esbuild-metafile.json --bundle --format=esm --platform=browser",
@@ -28,6 +29,7 @@
     "@types/react-dom": "^18.2.7",
     "esbuild": "^0.19.6",
     "miniflare": "^3.20231025.1",
+    "tsx": "^4.6.1",
     "typescript": "^5.1.6",
     "vite": "^5.0.0",
     "vite-tsconfig-paths": "^4.2.1",
