@@ -19,6 +19,6 @@ export default defineConfig({
   ],
   webServer: {
     command: `${command} --port ${PORT}`,
-    port: PORT
-  }
+    port: PORT,
+  },
 });
