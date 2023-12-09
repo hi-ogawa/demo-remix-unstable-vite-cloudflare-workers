@@ -13,3 +13,8 @@ minify = true
 [[kv_namespaces]]
 binding = "kv"
 id = "583c3ad45f3c4baeb48e901e1cd8ad12"
+
+# https://developers.cloudflare.com/workers/configuration/environment-variables/#environment-variables
+# https://developers.cloudflare.com/workers//wrangler/commands/#secret
+[vars]
+SOME_VAR="hello"
