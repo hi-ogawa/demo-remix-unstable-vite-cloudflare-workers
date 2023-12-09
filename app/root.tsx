@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -17,12 +18,17 @@ export default function App() {
         <Links />
       </head>
       <body ref={(el) => el?.setAttribute("data-testid", "hydrated")}>
-        <a
-          href="https://github.com/hi-ogawa/demo-remix-unstable-vite-cloudflare-workers"
-          target="_blank"
-        >
-          Source code
-        </a>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <a
+            href="https://github.com/hi-ogawa/demo-remix-unstable-vite-cloudflare-workers"
+            target="_blank"
+          >
+            Source code
+          </a>
+          <Link to="/">Index</Link>
+          <Link to="/kv">KV Demo</Link>
+          <Link to="/vars">Vars Demo</Link>
+        </div>
         <Outlet />
         <ScrollRestoration />
         <LiveReload />
