@@ -11,7 +11,7 @@ const miniflare = new Miniflare({
   //   getBindings https://github.com/cloudflare/workers-sdk/blob/04a2d0ed6fca1c366cd891b54026c34e1c1a5701/packages/wrangler/src/dev.tsx#L856-L861
   //   buildMiniflareOptions https://github.com/cloudflare/workers-sdk/blob/3b5407a968189e60974233c5db8615162db37fd2/packages/wrangler/src/dev/miniflare.ts#L497-L500
   //
-  // eventually wrangler might expose API to achive this
+  // TODO: eventually wrangler might expose API to achive this automatically
   //   https://github.com/hi-ogawa/demo-remix-unstable-vite-cloudflare-workers/issues/10
 
   // kv_namespaces
