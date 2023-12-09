@@ -11,6 +11,8 @@
     "test-e2e": "playwright test",
     "build-metafile": "esbuild build/server/index.js --minify --outfile=build/server/esbuild-index.js --metafile=build/server/esbuild-metafile.json --bundle --format=esm --platform=browser",
     "release": "wrangler deploy",
+    "lint": "prettier --cache -w .",
+    "lint-check": "prettier --cache -c .",
     "typecheck": "tsc"
   },
   "dependencies": {
@@ -29,6 +31,7 @@
     "@types/react-dom": "^18.2.7",
     "esbuild": "^0.19.6",
     "miniflare": "^3.20231025.1",
+    "prettier": "^3.1.0",
     "tsx": "^4.6.1",
     "typescript": "^5.1.6",
     "vite": "^5.0.0",

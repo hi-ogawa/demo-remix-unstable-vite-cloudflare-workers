@@ -46,6 +46,9 @@ devDependencies:
   miniflare:
     specifier: ^3.20231025.1
     version: 3.20231025.1
+  prettier:
+    specifier: ^3.1.0
+    version: 3.1.0
   tsx:
     specifier: ^4.6.1
     version: 4.6.1
@@ -4296,6 +4299,12 @@ packages:
   /prettier@2.8.8:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier@3.1.0:
+    resolution: {integrity: sha512-TQLvXjq5IAibjh8EpBIkNKxO749UEWABoiIZehEPiY4GNpVdhaFKqSTu+QrlU6D2dPAfubRmtJTi4K4YkQ5eXw==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
