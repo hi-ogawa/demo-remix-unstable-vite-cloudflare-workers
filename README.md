@@ -1,3 +1,7 @@
+UPDATE: Now I have a completely different approach to run Remix directly on Workerd/Miniflare during development using [`vite-node`](https://github.com/vitest-dev/vitest/tree/main/packages/vite-node). If anyone is intersted, please feel free to take a look at [`@hiogawa/vite-node-miniflare`](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/vite-node-miniflare) and [Remix Vite example](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/vite-node-miniflare/examples/remix).
+
+---
+
 Experiment to use remix unstable vite for cloudflare workers.
 
 ~This demo requires `serverBuildEntry` option from this PR https://github.com/remix-run/remix/pull/7975~ (it turns out this is not necessary)
