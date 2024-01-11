@@ -16,9 +16,9 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@remix-run/node": "0.0.0-nightly-a9e0102-20231130",
-    "@remix-run/react": "0.0.0-nightly-a9e0102-20231130",
-    "@remix-run/server-runtime": "0.0.0-nightly-a9e0102-20231130",
+    "@remix-run/node": "2.4.1",
+    "@remix-run/react": "2.4.1",
+    "@remix-run/server-runtime": "2.4.1",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231025.0",
     "@playwright/test": "^1.39.0",
-    "@remix-run/dev": "0.0.0-nightly-a9e0102-20231130",
+    "@remix-run/dev": "2.4.1",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "esbuild": "^0.19.6",
