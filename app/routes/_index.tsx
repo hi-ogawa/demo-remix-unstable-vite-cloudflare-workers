@@ -1,6 +1,6 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { ServerRuntimeMetaFunction } from "@remix-run/server-runtime";
 
-export const meta: MetaFunction = () => {
+export const meta: ServerRuntimeMetaFunction = () => {
   return [
     { title: "New Remix App" },
     { name: "description", content: "Welcome to Remix!" },
