@@ -1,7 +1,7 @@
 import { createRequestHandler } from "@remix-run/server-runtime";
 import * as remixBuild from "../build/server/index.js";
 
-// wrangler will bundle this "server.mjs" with prebuilt `remixBuild`
+// wrangler will bundle this file "app/server.mjs" with prebuilt remix build "build/server/index.js"
 
 const remixHandler = createRequestHandler(remixBuild, process.env.NODE_ENV);
 
