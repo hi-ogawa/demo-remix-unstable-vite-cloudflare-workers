@@ -1,7 +1,7 @@
 import { defineConfig } from "@playwright/test";
 
 const PORT = 4456;
-const command = process.env["E2E_WEB_SERVER_COMMAND"] ?? "pnpm dev";
+const command = process.env["E2E_WEB_SERVER_COMMAND"] ?? "pnpm dev:vite";
 
 export default defineConfig({
   testDir: "e2e",

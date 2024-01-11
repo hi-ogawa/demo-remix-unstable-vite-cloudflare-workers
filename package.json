@@ -5,18 +5,19 @@
   "type": "module",
   "scripts": {
     "build": "vite build && vite build --ssr",
-    "dev": "vite dev",
+    "dev": "pnpm run --stream /^dev:/",
+    "dev:vite": "vite",
+    "dev:tsc": "tsc -b --watch --preserveWatchOutput",
+    "tsc": "tsc -b",
     "repl": "tsx -i -e \"setTimeout(() => import('./app/miniflare.ts'), 300)\"",
     "preview": "wrangler dev",
     "test-e2e": "playwright test",
     "build-metafile": "esbuild build/server/index.js --minify --outfile=build/server/esbuild-index.js --metafile=build/server/esbuild-metafile.json --bundle --format=esm --platform=browser",
     "release": "wrangler deploy",
     "lint": "prettier --cache -w .",
-    "lint-check": "prettier --cache -c .",
-    "typecheck": "tsc"
+    "lint-check": "prettier --cache -c ."
   },
   "dependencies": {
-    "@remix-run/node": "2.4.1",
     "@remix-run/react": "2.4.1",
     "@remix-run/server-runtime": "2.4.1",
     "isbot": "^4.3.0",
@@ -27,6 +28,8 @@
     "@cloudflare/workers-types": "^4.20231218.0",
     "@playwright/test": "^1.40.1",
     "@remix-run/dev": "2.4.1",
+    "@tsconfig/strictest": "^2.0.2",
+    "@types/node": "^20.11.0",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
     "esbuild": "^0.19.11",
@@ -35,7 +38,6 @@
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.11",
-    "vite-tsconfig-paths": "^4.2.3",
     "wrangler": "^3.22.4"
   },
   "engines": {

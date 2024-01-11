@@ -14,6 +14,8 @@ jobs:
           node-version: 18
           cache: pnpm
       - run: pnpm i
+      - run: pnpm lint-check
+      - run: pnpm tsc
       - run: pnpm build
       - run: npx playwright install chromium
       - run: pnpm test-e2e
