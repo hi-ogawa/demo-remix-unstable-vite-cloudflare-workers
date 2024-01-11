@@ -19,24 +19,24 @@
     "@remix-run/node": "2.4.1",
     "@remix-run/react": "2.4.1",
     "@remix-run/server-runtime": "2.4.1",
-    "isbot": "^3.6.8",
+    "isbot": "^4.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20231025.0",
-    "@playwright/test": "^1.39.0",
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "@playwright/test": "^1.40.1",
     "@remix-run/dev": "2.4.1",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
-    "esbuild": "^0.19.6",
-    "miniflare": "^3.20231025.1",
-    "prettier": "^3.1.0",
-    "tsx": "^4.6.1",
-    "typescript": "^5.1.6",
-    "vite": "^5.0.0",
-    "vite-tsconfig-paths": "^4.2.1",
-    "wrangler": "^3.18.0"
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "esbuild": "^0.19.11",
+    "miniflare": "^3.20231218.1",
+    "prettier": "^3.1.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "vite-tsconfig-paths": "^4.2.3",
+    "wrangler": "^3.22.4"
   },
   "engines": {
     "node": ">=18.0.0"
