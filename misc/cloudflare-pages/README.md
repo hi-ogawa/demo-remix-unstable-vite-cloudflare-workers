@@ -1,6 +1,6 @@
 # cloudflare-pages
 
-(copied from https://github.com/hi-ogawa/remix-vite-deployment-examples/tree/main/misc/cloudflare-pages)
+https://remix-vite-example-hiro18181.pages.dev
 
 script for cloudflare pages deployment
 
@@ -13,5 +13,10 @@ pnpm pages-preview
 
 # before release, bindings must be setup manually from dashbaord
 # https://developers.cloudflare.com/pages/functions/bindings
+npx wrangler kv:namespace create kv_pages  # => remix-unstable-vite-cloudflare-workers-kv_pages
 pnpm pages-release
 ```
+
+## references
+
+mostly copied from https://github.com/hi-ogawa/remix-vite-deployment-examples/tree/main/misc/cloudflare-pages
