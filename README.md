@@ -1,10 +1,7 @@
-UPDATE: Now I have a completely different approach to run Remix directly on Workerd/Miniflare during development using [`vite-node`](https://github.com/vitest-dev/vitest/tree/main/packages/vite-node). If anyone is intersted, please feel free to take a look at [`@hiogawa/vite-node-miniflare`](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/vite-node-miniflare) and [Remix Vite example](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/vite-node-miniflare/examples/remix).
+> [!note]
+> I'm currently experimenting with a different approach to run Remix directly on Workerd/Miniflare during development using [`vite-node`](https://github.com/vitest-dev/vitest/tree/main/packages/vite-node). If anyone is intersted, please feel free to take a look at [`@hiogawa/vite-node-miniflare`](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/vite-node-miniflare) and [Remix Vite example](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/vite-node-miniflare/examples/remix).
 
----
-
-Experiment to use remix unstable vite for cloudflare workers.
-
-~This demo requires `serverBuildEntry` option from this PR https://github.com/remix-run/remix/pull/7975~ (it turns out this is not necessary)
+Experiment to use remix unstable vite for Cloudflare Workers. See also [`./misc/cloudflare-pages`](./misc/cloudflare-pages) for Cloudflare Pages deployment.
 
 ```sh
 # run vite dev server with miniflare to mimic cloudflare workers runtime
@@ -33,49 +30,3 @@ pnpm build-metafile
 - https://github.com/honojs/vite-plugins/tree/main/packages/dev-server
 - https://github.com/cloudflare/next-on-pages/tree/main/internal-packages/next-dev
 - https://github.com/hi-ogawa/remix-vite-deployment-examples
-
----
-
-(original README.md from https://github.com/remix-run/remix/blob/bf2feb9bdb292ac6560964d6749b0fcf9a8c784e/templates/unstable-vite-express/README.md)
-
-# templates/unstable-vite-express
-
-⚠️ Remix support for Vite is unstable and not recommended for production.
-
-📖 See the [Remix Vite docs][remix-vite-docs] for details on supported features.
-
-## Setup
-
-```shellscript
-npx create-remix@latest --template remix-run/remix/templates/unstable-vite-express
-```
-
-## Run
-
-Spin up the Express server as a dev server:
-
-```shellscript
-npm run dev
-```
-
-Or build your app for production and run it:
-
-```shellscript
-npm run build
-npm run start
-```
-
-## Customize
-
-Remix exposes APIs for integrating Vite with a custom server:
-
-```ts
-import {
-  unstable_createViteServer,
-  unstable_loadViteServerBuild,
-} from "@remix-run/dev";
-```
-
-In this template, we'll use Express but remember that these APIs can be used with _any_ Node-compatible server setup that supports standard middleware.
-
-[remix-vite-docs]: https://remix.run/docs/en/main/future/vite
