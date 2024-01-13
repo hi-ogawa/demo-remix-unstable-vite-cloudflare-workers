@@ -8,6 +8,9 @@ script for cloudflare pages deployment
 # initial setup
 npx wrangler pages project create remix-vite-example-hiro18181 --production-branch main
 
+# build cloudflare pages advanced mode
+pnpm pages-build
+
 # during local preview, wranger will use bindings in wrangler.toml
 pnpm pages-preview
 
