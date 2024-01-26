@@ -22,9 +22,5 @@ test("kv", async ({ page }) => {
 
 test("vars", async ({ page }) => {
   await page.goto("/vars");
-  if (process.env.E2E_WEB_SERVER_COMMAND?.includes("preview")) {
-    await page.getByText('{"SOME_VAR":"hello"}').click();
-  } else {
-    await page.getByText('{"SOME_VAR":"hello-dev"}').click();
-  }
+  await page.getByText('{"SOME_VAR":"hello"}').click();
 });
